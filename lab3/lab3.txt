@@ -1,1 +1,98 @@
+Exercises Lab 3:
 
+
+**Task 1:**
+Create a class called time that has separate int member data for hours, minutes, and seconds. One constructor
+should initialize this data to 0, and another should initialize it to fixed values. Another member function should
+display it, in 11:59:59 format. The final member function should add two objects of type time passed as
+arguments.
+A main() program should create two initialized time objects (should they be const?) and one that isn’t initialized.
+Then it should add the two initialized values together, leaving the result in the third time variable. Finally it should
+display the value of this third variable. Make appropriate member functions const.
+Task 2:
+Imagine a tollbooth at a bridge. Cars passing by the booth are expected to pay a 50 cent toll. Mostly they do, but
+sometimes a car goes by without paying. The tollbooth keeps track of the number of cars that have gone by, and of
+the total amount of money collected.
+Model this tollbooth with a class called tollBooth. The two data items are a type unsigned int to hold the total
+number of cars, and a type double to hold the total amount of money collected. A constructor initializes both of
+
+these to 0. A member function called payingCar() increments the car total and adds 0.50 to the cash total. Another
+function,
+called nopayCar(), increments the car total but adds nothing to the cash total. Finally, a member function called
+display() displays the two totals. Make appropriate member functions const.
+Include a program to test this class. This program should allow the user to push one key to count a paying car, and
+another to count a nonpaying car. Pushing the Esc key should cause the program to print out the total cars and
+total cash and then exit.
+Note: _getch() (from &lt;conio.h&gt;) reads a key press instantly without requiring Enter.
+The loop keeps running until the user presses Esc.the ASCII code 27 is the Esc key
+Task 3:
+Create a class that includes a data member that holds a “serial number” for each object created from the class.
+That is, the first object created will be numbered 1, the second 2, and so on. To do this, you’ll need another data
+member that records a count of how many objects have been created so far. (This member should apply to the
+class as a whole; not to individual objects. What keyword specifies this?) Then, as each object is created, its
+constructor can examine this count member variable to determine the appropriate serial number for the new
+object.
+Add a member function that permits an object to report its own serial number. Then write a main() program that
+creates three objects and queries each one about its serial number. They should respond I am object number 2, and
+so on.
+
+Task 4:
+In ocean navigation, locations are measured in degrees and minutes of latitude and longitude. Thus if you’re lying
+off the mouth of Papeete Harbor in Tahiti, your location is 149 degrees 34.8 minutes west longitude, and 17
+degrees 31.5 minutes south latitude. This is written as 149°34.8’ W, 17°31.5’ S. There are 60 minutes in a degree.
+(An older system also divided a minute into 60 seconds, but the modern approach is to use decimal minutes
+instead.) Longitude is measured from 0 to 180 degrees, east or west from Greenwich, England, to the international
+dateline in the Pacific. Latitude is measured from 0 to 90 degrees, north or south from the equator to the poles.
+Create a class angle that includes three member variables: an int for degrees, a float for minutes, and a char for the
+direction letter (N, S, E, or W). This class can hold either a latitude variable or a longitude variable. Write one
+member function to obtain an angle value (in degrees and minutes) and a direction from the user, and a second to
+display the angle value in 179°59.9’ E format. Also write a three-argument constructor.
+Write a main() program that displays an angle initialized with the constructor, and then, within a loop, allows the
+user to input any angle value, and then displays the value. You can use the hex character constant ‘\xF8’, which
+usually prints a degree (°) symbol.
+
+Note:
+ fixed: This manipulator is used to display floating-point numbers in fixed-point notation (i.e., a set number
+of digits after the decimal point).
+ setprecision(n): This manipulator sets the number of digits to be displayed after the decimal point. For
+example, setprecision(1) ensures that only one digit will be displayed after the decimal point, as seen in
+your angle minutes.
+Task 5:
+Create a class called calendar. The calendar should have 12 arrays for each month of the year, and a variable that
+stores information about the current year. The user is allowed to store their tasks to do against each day. Assume
+only one entry is needed per day.
+Create the following methods for your class:
+ Add a task. Thisfunction accepts three parameters: task details, date and month. It should add
+ a task on the day specified.
+ Remove a task. Accepts the date and month as a parameter to remove the task from.
+ Show tasks. This method should go through all of your months and print all the tasks allocated.
+Your task is to create one calendar object, then hardcode 5-6 tasks for your calendar. Then demonstrate how
+you’ll remove a task, and display the updated task list.
+Task 6:
+Create a class called Smartphone with the following attributes:
+ Company
+ Model
+ Display Resolution
+ RAM
+ ROM
+ Storage
+
+Create getter and setter methods for your attributes. A smartphone has some specific actions that it can perform.
+For example:
+1. Make a phone call
+2. Send a message
+3. Connect to the wifi
+4. Browse the internet
+
+Create different smartphone objects. Set their attributes using the setter functions and display their attributes after
+using the getter functions to fetch the attributes.
+Task 7:
+Create a class for a stationary shop. The stationary shop maintains a list for all the items that it sells (hint: array of
+strings), and another list with the prices of the items (hint: array of prices).
+Create a menu-driven program to:
+1. Allow the shop owner to add the items and their prices.
+2. Fetch the list of items
+3. Edit the prices of the items
+4. View all the items and their prices
+Create a receipt that the shopkeeper can share with their customers. The receipt can only be created after the
+shopkeeper inputs the items and their amounts bought by the customer.
